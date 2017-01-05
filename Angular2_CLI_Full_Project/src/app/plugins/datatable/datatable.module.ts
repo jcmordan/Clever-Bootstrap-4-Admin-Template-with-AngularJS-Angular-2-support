@@ -4,13 +4,14 @@ import { CommonModule }             from '@angular/common';
 // DataTable
 import { DataTableModule }          from 'angular2-datatable';
 import { HttpModule }               from '@angular/http';
-import { DataFilterPipe }           from './datafilterpipe';
 import { FormsModule }              from '@angular/forms';
 
 import { DataTableComponent }       from './datatable.component';
+import {SharedModule} from "../../shared/shared.module";
 
 //Routing
 import { DatatableRoutingModule }     from './datatable-routing.module';
+
 //
 @NgModule({
     imports: [
@@ -18,11 +19,11 @@ import { DatatableRoutingModule }     from './datatable-routing.module';
         CommonModule,
         DataTableModule,
         FormsModule,
-        HttpModule
+        HttpModule,
+        SharedModule
     ],
     declarations: [
-        DataTableComponent,
-        DataFilterPipe
+        DataTableComponent
     ]
 })
 export class DatatableInitModule { }
